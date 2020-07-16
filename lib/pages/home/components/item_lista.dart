@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vitrine_app/models/produto.dart';
+import 'package:vitrine_app/pages/details/datail.dart';
 
 class ItemLista extends StatelessWidget {
   final Produto produto;
@@ -9,9 +10,13 @@ class ItemLista extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => print('clicou no item ${produto.id}'),
+      onTap: () => Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => Detail(
+          produto: produto,
+        ),
+      )),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           _criaCardImagem(produto),
           _criaTituloProduto(produto),
