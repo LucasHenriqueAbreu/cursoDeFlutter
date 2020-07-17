@@ -33,11 +33,6 @@ class ItemLista extends StatelessWidget {
         decoration: BoxDecoration(
           color: produto.cor,
           borderRadius: BorderRadius.circular(20),
-          // gradient: LinearGradient(
-          //   begin: Alignment.topRight,
-          //   end: Alignment.bottomLeft,
-          //   colors: [produto.cor, Colors.white],
-          // ),
         ),
         child: Hero(
           tag: produto.id,
